@@ -15,10 +15,33 @@ var fs = require('fs');
 
 // fs.rmdirSync('pub')
 
-fs.mkdir('pub',()=>{
-    fs.readFile('input.txt',(err,data)=>{
-        fs.writeFile('./pub/write.txt',data,()=>{
-            console.log('success')
-        })
-    })
-})
+// fs.mkdir('pub',()=>{
+//     fs.readFile('input.txt',(err,data)=>{
+//         fs.writeFile('./pub/write.txt',data,()=>{
+//             console.log('success')
+//         })
+//     })
+// })
+
+// fs.readFile('证件照.jpg',(err,data)=>{
+//     if(err){
+//         console.log(err)
+//     }else{
+//         var txt = data.toString('utf-8');
+//         console.log(txt)
+//     }
+// })
+
+// try{
+//     var txt = fs.readFileSync('input.txt','utf-8');
+//     console.log(txt);
+// } catch(err) {
+//     console.log(err)
+// }
+
+// fs.stat('input.txt',(err,stat)=>{
+//     console.log(stat)
+// })
+
+var stat = fs.statSync('input.txt');
+console.log(stat)
